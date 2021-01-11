@@ -28,6 +28,9 @@ class Todo extends React.Component {
     return (
       <li className={classLi}>
         <div>
+          <h1>{this.props.index + 1}.</h1>
+        </div>
+        <div>
           <h3> {this.state.isEditing ? <Inputtext saveClick={this.saveClick} value={this.props.name} index={this.props.index}/> : <span onClick={this.editClick} >{ this.props.name }</span>}</h3>
           <h4> {this.props.content}</h4>
         </div>

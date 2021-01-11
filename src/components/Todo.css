@@ -3,7 +3,7 @@ li{
     font-size:16px;
     border-radius: 10px;
     margin-top: 10px;
-    padding-left: 10px;
+    padding-left: 20px;
     /* background:#ff9e97; */
 }
 
@@ -12,6 +12,12 @@ li{
 }
 
 li div:first-of-type{
+    flex:1;
+    display: flex;
+    align-items: center
+}
+
+li div:nth-child(2){
     flex:5;
 }
 
