@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Hachi Maru Pop', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 ul{
@@ -25,8 +24,8 @@ h2{
   height: 100px;
   line-height:100px;
   border-radius: 40px 40px 0 0 ;
-  border: 1px solid white;
   margin: 0;
+  background:white;
 }
 
 
@@ -36,8 +35,20 @@ ul{
 }
 
 .main{
-  border: 1px dotted white;
+  background:white;
   border-top: none;
   border-radius: 5px;
   padding: 0;
+}
+
+.red{
+  background:#ff9e97;
+}
+
+.yellow{
+  background:#ffe189;
+}
+
+.green{
+  background:#85c7c3;
 }

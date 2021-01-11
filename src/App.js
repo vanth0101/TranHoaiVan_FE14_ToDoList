@@ -20,9 +20,14 @@ class App extends React.Component {
         },
         {
           'name': 'COMIC',
-          'content': 'Attack on Titan',
+          'content': 'OnePiece',
           'status':'Cancel'
         },
+        {
+          'name': 'ANIME',
+          'content': 'Attack on Titan',
+          'status':'Finished'
+        }
       ]
     }
   }

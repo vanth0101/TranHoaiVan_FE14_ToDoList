@@ -1,6 +1,7 @@
 import './Todo.css';
 import React from 'react';
 import Inputtext from './Input';
+import classnames from 'classnames';
 
 class Todo extends React.Component {
   constructor(props) {
@@ -21,8 +22,11 @@ class Todo extends React.Component {
     this.setState({ isEditing: true });
   }
   render() {
+    let classLi = '';
+    classLi = this.props.index % 3 == 0 ? 'red' : this.props.index % 3 == 1 ? 'yellow' : 'green';
+   
     return (
-      <li>
+      <li className={classLi}>
         <div>
           <h3> {this.state.isEditing ? <Inputtext saveClick={this.saveClick} value={this.props.name} index={this.props.index}/> : <span onClick={this.editClick} >{ this.props.name }</span>}</h3>
           <h4> {this.props.content}</h4>
