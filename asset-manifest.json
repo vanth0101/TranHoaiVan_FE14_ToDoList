@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TranHoaiVan_FE14_ToDoList/static/css/main.ec46e2e9.chunk.css",
+    "main.js": "/TranHoaiVan_FE14_ToDoList/static/js/main.79034a9b.chunk.js",
+    "main.js.map": "/TranHoaiVan_FE14_ToDoList/static/js/main.79034a9b.chunk.js.map",
+    "runtime-main.js": "/TranHoaiVan_FE14_ToDoList/static/js/runtime-main.bda2d46d.js",
+    "runtime-main.js.map": "/TranHoaiVan_FE14_ToDoList/static/js/runtime-main.bda2d46d.js.map",
+    "static/js/2.277b7147.chunk.js": "/TranHoaiVan_FE14_ToDoList/static/js/2.277b7147.chunk.js",
+    "static/js/2.277b7147.chunk.js.map": "/TranHoaiVan_FE14_ToDoList/static/js/2.277b7147.chunk.js.map",
+    "static/js/3.6e72d3bd.chunk.js": "/TranHoaiVan_FE14_ToDoList/static/js/3.6e72d3bd.chunk.js",
+    "static/js/3.6e72d3bd.chunk.js.map": "/TranHoaiVan_FE14_ToDoList/static/js/3.6e72d3bd.chunk.js.map",
+    "index.html": "/TranHoaiVan_FE14_ToDoList/index.html",
+    "static/css/main.ec46e2e9.chunk.css.map": "/TranHoaiVan_FE14_ToDoList/static/css/main.ec46e2e9.chunk.css.map",
+    "static/js/2.277b7147.chunk.js.LICENSE.txt": "/TranHoaiVan_FE14_ToDoList/static/js/2.277b7147.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bda2d46d.js",
+    "static/js/2.277b7147.chunk.js",
+    "static/css/main.ec46e2e9.chunk.css",
+    "static/js/main.79034a9b.chunk.js"
+  ]
+}
