@@ -8,7 +8,7 @@ class Input extends React.Component {
     }
   }
 
-  handleChange = (e,key) =>{
+  handleChange = (e, key) => {
     this.setState({value:e.target.value})
   }
  

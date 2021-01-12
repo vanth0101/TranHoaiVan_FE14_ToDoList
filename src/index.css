@@ -11,8 +11,7 @@ ul{
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Hachi Maru Pop', cursive;
 }
 
 .App-header div{
@@ -28,7 +27,9 @@ h2{
   background:white;
 }
 
-
+h3 span:hover{
+  cursor: pointer;
+}
 
 ul{
   list-style:none;
@@ -51,4 +52,20 @@ ul{
 
 .green{
   background:#85c7c3;
+}
+
+input{
+  height: 40px;
+  font-size: 18px;
+  padding-right: 5px;
+  margin-right: 10px;
+}
+
+input, input::placeholder {
+  font-family: 'Hachi Maru Pop', cursive;
+}
+
+img{
+  width: 2.5%;
+  margin: 0 1%;
 }

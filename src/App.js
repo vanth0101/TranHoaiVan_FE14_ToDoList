@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import Task from './components/Task';
+import star from './components/pngwing.com.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class App extends React.Component {
   }
 
   getdata = (data, key) => {
+    if (!data){return false}
     let taskUpdate = [...this.state.task];
     taskUpdate[key].name = data;
     this.setState({ task: taskUpdate });
@@ -42,7 +44,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-            <h2>TO DO LIST</h2>
+          <h2><img src={star}/>TO DO LIST<img src={star}/></h2>
           <div className="main">
               <ul>
               {this.state.task.map((item, index) => <Task {...item} getdata={this.getdata} key={index} index={index}/>)}
