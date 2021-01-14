@@ -1,7 +1,6 @@
 import './Todo.css';
 import React from 'react';
 import Inputtext from './Input';
-import classnames from 'classnames';
 
 class Todo extends React.Component {
   constructor(props) {
@@ -18,12 +17,14 @@ class Todo extends React.Component {
     this.props.getdata(event,key);
   }
 
+  
   editClick = () => {
     this.setState({ isEditing: true });
   }
+  
   render() {
     let classLi = '';
-    classLi = this.props.index % 3 == 0 ? 'red' : this.props.index % 3 == 1 ? 'yellow' : 'green';
+    classLi = this.props.index % 3 === 0 ? 'red' : this.props.index % 3 === 1 ? 'yellow' : 'green';
    
     return (
       <li className={classLi}>

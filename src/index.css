@@ -10,6 +10,31 @@ ul{
   padding: 0 20px;
 }
 
+
+.newTask{
+  background:white;
+}
+
+  .newTask input{
+    border-bottom: 1px solid rgb(61, 60, 60);
+    border-radius: 2px!important;
+  }
+
+  .newTask input:focus{
+    outline:none;
+  }
+
+  .newTask .btn{
+    background:none;
+    border: none;
+    font-family: 'Hachi Maru Pop', cursive;
+    font-weight: bold;
+    font-size: 18px;
+  }
+    .newTask .btn:hover{
+      cursor: pointer;
+    }
+
 code {
   font-family: 'Hachi Maru Pop', cursive;
 }

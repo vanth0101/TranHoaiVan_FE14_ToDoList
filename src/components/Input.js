@@ -8,7 +8,7 @@ class Input extends React.Component {
     }
   }
 
-  handleChange = (e, key) => {
+  change = (e, key) => {
     this.setState({value:e.target.value})
   }
  
@@ -16,7 +16,7 @@ class Input extends React.Component {
     const saveClick = this.props.saveClick;
     return (
       <div>
-        <input type="text" placeholder={this.props.value} onChange={this.handleChange}></input>
+        <input type="text" placeholder={this.props.value} onChange={this.change}></input>
         <span onClick={() => { saveClick(this.state.value,this.props.index) }}>Save</span>
       </div>
     );
