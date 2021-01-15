@@ -17,14 +17,14 @@ class Todo extends React.Component {
     this.props.getdata(event,key);
   }
 
-  
+
   editClick = () => {
     this.setState({ isEditing: true });
   }
   
   render() {
     let classLi = '';
-    classLi = this.props.index % 3 === 0 ? 'red' : this.props.index % 3 === 1 ? 'yellow' : 'green';
+    classLi = this.props.status === 'Finished' ? 'red' : this.props.status === 'Pending' ? 'yellow' : 'green';
    
     return (
       <li className={classLi}>
