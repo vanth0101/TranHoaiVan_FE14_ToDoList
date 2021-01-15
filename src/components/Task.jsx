@@ -1,6 +1,6 @@
 import './Todo.css';
 import React from 'react';
-import Inputtext from './Input';
+import Inputtext from './Input.jsx';
 
 class Todo extends React.Component {
   constructor(props) {
