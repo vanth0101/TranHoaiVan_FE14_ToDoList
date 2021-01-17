@@ -1,8 +1,8 @@
+import React, { useState } from 'react';
 import './App.css';
-import React,{useState} from 'react';
-import Task from './components/Task.jsx';
+import Newtask from './components/NewTask.jsx';
 import star from './components/pngwing.com.png';
-import Newtask from './components/NewTask.jsx'
+import Task from './components/Task.jsx';
 
 function App(){
   let taskdata = [
@@ -30,16 +30,17 @@ function App(){
 
   const [task, setTask] = useState(taskdata);
 
-  const getdata = (data, key) => {
-    if (!data){return false}
+  const getdata = (data, key, statusValue) => {
+    if (!data&&task[key].status===statusValue){return false}
     let taskUpdate = [...task];
-    taskUpdate[key].name = data;
+    if (data) { taskUpdate[key].name = data; }
+    if (task[key].status!==statusValue) {taskUpdate[key].status = statusValue;}
     setTask(taskUpdate);
   }
 
   const addfn = (value) => {
     let taskUpdate = [...task];
-    taskUpdate.push({ name: value });
+    taskUpdate.push({ name: value, content:'', status:'Pending' });
     setTask(taskUpdate);
   }
 
