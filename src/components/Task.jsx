@@ -1,6 +1,7 @@
 import './Todo.css';
 import React from 'react';
 import Inputtext from './Input.jsx';
+import ShowMoreText from 'react-show-more-text';
 
 class Todo extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class Todo extends React.Component {
   }
 
   editClick = () => {
+    console.log('EDIT');
     this.setState({ isEditing: true });
   }
   
@@ -35,11 +37,27 @@ class Todo extends React.Component {
         <div>
           <h1>{this.props.index + 1}.</h1>
         </div>
-        <div>
-          <h3> {this.state.isEditing ? <Inputtext saveClick={this.saveClick} value={this.props.name} index={this.props.index}/> : <span onClick={this.editClick} >{ this.props.name }</span>}</h3>
-          <h4> {this.props.content }</h4>
+        <div className="flex-center">
+          <h3> { this.state.isEditing ?
+            <Inputtext
+              saveClick={this.saveClick}
+              value={this.props.name}
+              index={this.props.index} /> :
+              <ShowMoreText
+              lines={1}
+              more='Show more'
+              less='Show less'
+              className='content-css'
+              anchorClass='my-anchor-css-class'
+              expanded={false}
+              width={380}
+          ><span onClick={this.editClick}>{this.props.name}</span></ShowMoreText>
+          }</h3>
         </div>
-        <div>
+        <div className="flex-center deleteX">
+          <p onClick={()=>this.props.deletefn(this.props.index)}>X</p>
+        </div>
+        <div className="flex-center">
           {this.state.isEditing ?
             <p>
             <select onChange={this.handleChange}>

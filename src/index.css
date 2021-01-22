@@ -13,11 +13,13 @@ ul{
 
 .newTask{
   background:white;
+  padding-bottom: 30px;
 }
 
   .newTask input{
     border-bottom: 1px solid rgb(61, 60, 60);
     border-radius: 2px!important;
+    width: 70%;
   }
 
   .newTask input:focus{
@@ -66,9 +68,13 @@ ul{
 
 .main{
   background:white;
-  border-top: none;
+  border-top: 1px solid black;
   border-radius: 0 0 5px 5px;
   padding: 0;
+}
+
+ul li{
+  position: relative;
 }
 
 .red{
@@ -98,3 +104,28 @@ img{
   width: 2.5%;
   margin: 0 1%;
 }
+
+.flex-center{
+  display:flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+  .flex-center p{
+    font-weight: bold;
+  }
+
+.deleteX{
+  top: 15%;
+  right: 20%;
+  width: 10%!important;
+  position: absolute;
+  justify-content: flex-end;
+}
+
+  select{
+    border: 0.2px solid #333;
+    background: none;
+    font-size: 16px;
+    font-family: 'Hachi Maru Pop', cursive;
+  }
