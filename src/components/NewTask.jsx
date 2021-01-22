@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+
 
 function NewTask(props) {
     
@@ -8,12 +9,17 @@ function NewTask(props) {
        setValue(e.target.value);
     }
 
+    function confirm() {
+        document.getElementById('inputTask').value = '';
+        setValue('');
+    }
+
     const addfn = props.addfn;
 
         return (
             <div className="newTask">
-                <input placeholder="Add new task" onChange={handleChange}></input>
-                <button className="btn btn-primary" onClick={() => { addfn(value) }}>Add</button>
+                <input id="inputTask" placeholder="Add new task" onChange={handleChange}></input>
+                <button className="btn btn-primary" onClick={() => { addfn(value); confirm()}}>Add</button>
             </div>
         );
 }
