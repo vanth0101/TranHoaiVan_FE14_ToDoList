@@ -21,7 +21,7 @@ function App(){
     {
       'name': 'SOCCER',
       'content': 'Manchester United',
-      'status':'Pending'
+      'status':'ToDo'
     },
     {
       'name': 'COMIC',
@@ -47,7 +47,7 @@ function App(){
 
   const addfn = (value) => {
     let taskUpdate = [...task];
-    taskUpdate.push({ name: value, content:'', status:'Pending' });
+    taskUpdate.push({ name: value, content:'', status:'ToDo' });
     setTask(taskUpdate);
   }
 
@@ -60,16 +60,19 @@ function App(){
     return (
       <div className="App">
         <header className="App-header">
+          <div className="headerLink flex-center">
           <p>
             <Link to="/">Home</Link>
           </p>
           <p>
             <Link to="/login">TodoList with MobX</Link>
           </p>
+          </div>
+         
           <BrowserRouter>
-            <ul>
+            <ul className="nav__head">
               <li><Link to="/">All</Link></li>
-              <li><Link to="/pending">Pending</Link></li>
+              <li><Link to="/pending">To_Do</Link></li>
               <li><Link to="/cancel">Cancel</Link></li>
               <li><Link to="/finish">Finish</Link></li>
             </ul>
@@ -82,7 +85,7 @@ function App(){
                     {task.map((item, index) => <Task {...item} getdata={getdata} deletefn={deletefn} key={index} index={index} />)}
                     </Route>
                     <Route path='/pending'>
-                      {task.filter((item1)=>item1.status==='Pending').map((item, index) => <Task {...item} getdata={getdata} deletefn={deletefn} key={index} index={index} />)}
+                      {task.filter((item1)=>item1.status==='ToDo').map((item, index) => <Task {...item} getdata={getdata} deletefn={deletefn} key={index} index={index} />)}
                     </Route>
                     <Route path='/cancel'>
                       {task.filter((item1)=>item1.status==='Cancel').map((item, index) => <Task {...item} getdata={getdata} deletefn={deletefn} key={index} index={index} />)}

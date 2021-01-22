@@ -30,7 +30,7 @@ class Todo extends React.Component {
   
   render() {
     let classLi = '';
-    classLi = this.props.status === 'Finished' ? 'red' : this.props.status === 'Pending' ? 'yellow' : 'green';
+    classLi = this.props.status === 'Finished' ? 'red' : this.props.status === 'Cancel' ? 'yellow' : 'green';
    
     return (
       <li className={classLi}>
