@@ -9,6 +9,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import HeaderLink from './components/HeaderLink';
 
 
 function App(){
@@ -60,14 +61,7 @@ function App(){
     return (
       <div className="App">
         <header className="App-header">
-          <div className="headerLink flex-center">
-          <p>
-            <Link to="/">Home</Link>
-          </p>
-          <p>
-            <Link to="/login">TodoList with MobX</Link>
-          </p>
-          </div>
+         <HeaderLink></HeaderLink>
          
           <BrowserRouter>
             <ul className="nav__head">

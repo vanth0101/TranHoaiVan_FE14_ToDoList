@@ -64,7 +64,7 @@ class Todo extends React.Component {
               <option value={this.state.statusValue}>{this.state.statusValue}</option>
               <option value="Finished">Finished</option>
               <option value="Cancel">Cancel</option>
-              <option value="Pending">Pending</option>
+              <option value="ToDo">ToDo</option>
             </select>
             </p> : <p onClick={this.editClick}>{this.props.status}</p>}
         </div>
